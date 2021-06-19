@@ -40,6 +40,3 @@ class TextQuestion(LayoutWindow):
 class LayoutFactory:
     def create_window(self, object_type, question):
         return eval(object_type)(question).page_content()
-
-
-
