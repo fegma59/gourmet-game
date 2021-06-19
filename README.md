@@ -1,2 +1,15 @@
 # gourmet-game
-Sistema GUI Python para Windows do Jogo Gourmet
+Sistema Python GUI do Jogo Gourmet
+
+###
+Para usar, basta clonar o repositório, instalar as dependencias usando:
+
+```
+pip install -r requirements.txt
+```
+
+E executar o main.py:
+
+```
+python3 main.py
+```
