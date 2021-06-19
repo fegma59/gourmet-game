@@ -42,4 +42,15 @@ class LayoutFactory:
         return eval(object_type)(question).page_content()
 
 
-
+if __name__ == "__main__":
+    factory = LayoutFactory()
+    layout = factory.create_window('TextQuestion', 'Qual comida voce pensou?')
+    for element in layout:
+        print(type(element[0]))
+    janela = simplegui.Window('Tela de inicio', layout)
+    while True:
+        eventos, valores = janela.read()
+        if eventos == simplegui.WINDOW_CLOSED:
+            break
+        if eventos == 'Ok':
+            print(eventos)
