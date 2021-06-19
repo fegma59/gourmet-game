@@ -14,12 +14,12 @@ class StartContent(LayoutWindow):
     def page_content(self):
         self.layout = [
             [simplegui.Text(self.question)],
-            [simplegui.Button('Ok')],
+            [simplegui.Button('Ok'), simplegui.Button('Close')],
         ]
         return self.layout
 
 
-class BoolQuestion(LayoutWindow):
+class BooleanQuestion(LayoutWindow):
     def page_content(self):
         self.layout = [
             [simplegui.Text(self.question)],
