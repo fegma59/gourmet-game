@@ -11,10 +11,13 @@ class Views:
 
     def view(self, title, layout):
         try:
+            logger.info('Creating a view based on a template')
             window = simplegui.Window(title, layout)
             events, values = window.read()
+            if events == simplegui.WIN_CLOSED or events == 'Cancel':
+                logger.info('User closed the game.')
+                sys.exit(0)
             return {'events': events, 'values': values}
-
         except Exception as exception_message:
             logger.error(f'Creating view error - {exception_message}')
             sys.exit(0)

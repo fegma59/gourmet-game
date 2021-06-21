@@ -1,5 +1,6 @@
 import PySimpleGUI as simplegui
 from abc import ABCMeta, abstractmethod
+from logs.setup_log import logger
 
 class LayoutWindow(metaclass=ABCMeta):
     def __init__(self, question):
@@ -39,4 +40,5 @@ class TextQuestion(LayoutWindow):
 
 class LayoutFactory:
     def create_window(self, object_type, question):
+        logger.info('Creating gui template')
         return eval(object_type)(question).page_content()
