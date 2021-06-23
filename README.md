@@ -13,3 +13,9 @@ E executar o main.py:
 ```
 python3 main.py
 ```
+
+Para executar os testes:
+
+```
+pytest -vvv tests
+```
